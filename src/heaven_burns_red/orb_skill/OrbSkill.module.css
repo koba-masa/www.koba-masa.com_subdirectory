@@ -1,0 +1,45 @@
+.header {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .header {
+    display: block;
+  }
+
+  .header-row {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+  }
+
+
+  .header-skills {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  /* .header-skills:nth-child(odd) {
+    background-color: aliceblue;
+  } */
+
+  .header-column {
+    writing-mode: vertical-rl;
+    text-align: start;
+    margin: 10px auto;
+  }
+
+  .body {
+    padding-top: 10px;
+    max-height: calc(100vh - 60px); /* Adjust the 50px according to the height of your header */
+    overflow-y: auto;
+  }
+
+  .body::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .body::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+}
