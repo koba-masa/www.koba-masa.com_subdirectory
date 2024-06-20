@@ -1,0 +1,28 @@
+.troop-row {
+  height: 100%;
+
+  border: 1px solid;
+  margin-top: -1px;
+}
+
+.troop-name {
+  text-align: left;
+  height: 100%;
+
+}
+
+@media (width >= 768px) {
+  .troop-row {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+
+    margin-top: -1px;
+  }
+
+  .troop-name {
+    grid-column: 1;
+    grid-row: 1 / 7;
+  }
+}
